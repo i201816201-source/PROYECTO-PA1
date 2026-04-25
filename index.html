@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cajero_automatico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
+    <div class="main-wrapper">
+        <h1>Mi Cajero Automático</h1>
+        
+        <div class="atm-card">
+            <div class="screen-display">
+                <p>BIENVENIDO A BANCO ISIL</p>
+                <small>Saldo Ilimitado Activado</small>
+                <input type="number" id="montoInput" placeholder="Monto S/." autofocus>
+            </div>
+
+            <div class="controls">
+                <button onclick="procesarRetiro()" class="btn-main">RETIRAR</button>
+                <button onclick="limpiar()" class="btn-sec">BORRAR</button>
+            </div>
+
+            <div id="area-comprobante"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
-    <h1>Mi Cajero Automático</h1>
 </body>
 </html>

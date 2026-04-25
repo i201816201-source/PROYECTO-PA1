@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.atm-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    width: 320px;
+    text-align: center;
+}
+
+.screen-display {
+    background: #111;
+    border-radius: 10px;
+    padding: 15px;
+    border: 2px solid #00d2ff;
+    margin-bottom: 20px;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #00d2ff;
+    color: #00d2ff;
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    outline: none;
+    margin-top: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-main { background: #00d2ff; color: #111; }
+.btn-main:hover { background: #3a7bd5; color: white; }
+
+.btn-sec { background: #555; color: white; }
+
+.ticket {
+    background: #f0f0f0;
+    color: #333;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

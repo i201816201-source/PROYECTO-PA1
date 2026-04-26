@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-wrapper">
-        <h1>Mi Cajero Automático</h1>
+    <div class="main-container">
+        <h1>MI CAJERO AUTOMÁTICO</h1>
         
-        <div class="atm-card">
-            <div class="screen-display">
-                <p>BIENVENIDO A BANCO ISIL</p>
-                <small>Saldo Ilimitado Activado</small>
-                <input type="number" id="montoInput" placeholder="Monto S/." autofocus>
+        <div id="login-screen" class="atm-card">
+            <div class="display-screen">
+                <p>INGRESE SU PIN DE SEGURIDAD</p>
+                <input type="password" id="pinInput" placeholder="****" maxlength="4">
             </div>
-
-            <div class="controls">
-                <button onclick="procesarRetiro()" class="btn-main">RETIRAR</button>
-                <button onclick="limpiar()" class="btn-sec">BORRAR</button>
+            <div class="button-group">
+                <button onclick="validarPin()" class="btn-primary">ENTRAR</button>
             </div>
+            <div id="error-pin"></div>
+        </div>
 
-            <div id="area-comprobante"></div>
+        <div id="atm-screen" class="atm-card" style="display: none;">
+            <div class="display-screen">
+                <p>BANCO ISIL - ESTADO DE CUENTA</p>
+                <input type="number" id="montoInput" placeholder="Monto S/.">
+            </div>
+            <div class="button-group">
+                <button onclick="procesarRetiro()" class="btn-primary">RETIRAR</button>
+                <button onclick="verSaldoCajero()" class="btn-info">SALDO CAJERO</button>
+                <button onclick="cerrarSesion()" class="btn-secondary">SALIR</button>
+            </div>
+            <div id="resultado-operacion"></div>
         </div>
     </div>
 
